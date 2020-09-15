@@ -6,7 +6,7 @@ router.get('/', function (req, res, next) {
     res.send('Service Home Page');
 });
 router.get('/:name', function (req, res, next) {
-    res.render('servicePage');
+    res.render(req.params.name);
 });
 
 

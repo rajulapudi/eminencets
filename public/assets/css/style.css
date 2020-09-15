@@ -369,9 +369,11 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 60vh;
-  background: url("../img/hero-bg.jpg") center center;
-  background-size: cover;
+  background: url("../img/hero-bg.jpg") right;
+  background-size: contain;
   position: relative;
+  background-color: #fff;
+  background-repeat: no-repeat;
   z-index: 1;
   padding: 0;
   margin-bottom: -120px;
@@ -825,11 +827,12 @@ section {
 # Services
 --------------------------------------------------------------*/
 .services .icon-box {
-  padding: 50px 20px;
+  padding: 50px 20px 0 20px;
   margin-top: 35px;
   margin-bottom: 25px;
   text-align: center;
-  height: 200px;
+  /* height: 200px; */
+  height: 100%;
   position: relative;
   background: #fff;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
@@ -1514,11 +1517,12 @@ section {
 .contact .info-box {
   color: #313030;
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
-  padding: 20px;
+  padding: 20px 10px 20px 10px;
+  height: 100%;
 }
 
 .contact .info-box i {
-  font-size: 32px;
+  font-size: 24px;
   color: #ff5821;
   border-radius: 50%;
   padding: 8px;
@@ -1934,55 +1938,54 @@ section {
   padding-left: 40px;
 }
 
-.blog .blog-comments .reply-form {
+.reply-form {
   margin-top: 30px;
   padding: 30px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-.blog .blog-comments .reply-form h4 {
+.reply-form h4 {
   font-weight: bold;
   font-size: 22px;
 }
-
-.blog .blog-comments .reply-form p {
+.reply-form p {
   font-size: 14px;
 }
 
-.blog .blog-comments .reply-form input {
+.reply-form input {
   border-radius: 0;
   padding: 20px 10px;
   font-size: 14px;
 }
 
-.blog .blog-comments .reply-form input:focus {
+.reply-form input:focus {
   box-shadow: none;
   border-color: #ffa587;
 }
 
-.blog .blog-comments .reply-form textarea {
+.reply-form textarea {
   border-radius: 0;
   padding: 10px 10px;
   font-size: 14px;
 }
 
-.blog .blog-comments .reply-form textarea:focus {
+.reply-form textarea:focus {
   box-shadow: none;
   border-color: #ffa587;
 }
 
-.blog .blog-comments .reply-form .form-group {
+.reply-form .form-group {
   margin-bottom: 25px;
 }
 
-.blog .blog-comments .reply-form .btn-primary {
+.reply-form .btn-primary {
   border-radius: 0;
   padding: 10px 20px;
   border: 0;
   background-color: #473d3a;
 }
 
-.blog .blog-comments .reply-form .btn-primary:hover {
+.reply-form .btn-primary:hover {
   background-color: #ff5821;
 }
 
@@ -2327,4 +2330,22 @@ section {
   background: #ff7e54;
   color: #fff;
   text-decoration: none;
+}
+/* Custom CSS */
+
+.serviceCards{
+  padding : 10px;
+  margin : 20px auto;
+
+}
+.img-car{
+    margin : auto;
+    max-width : 700px;
+}
+@media (max-width: 700px) {
+  .img-car{
+    max-height: 300px;
+      width : auto;
+      margin : auto;
+  }
 }
