@@ -1,39 +1,76 @@
-
-    <div class="container" data-aos="fade-up">
-        <div class="reply-form">
-            <h4 style="text-align: center; margin-bottom: 40px;">Share Your Details</h4>
-            <p>Please upload your resume for a speedy process</p>
-            <form method="post" enctype="multipart/form-data" action="/resume" role="form">
-                <div class="row">
-                    <div class="col-md-6 form-group">
-                        <input name="name" type="text" class="form-control" placeholder="Your Name*">
-                    </div>
-                    <div class="col-md-6 form-group">
-                        <input name="email" type="text" class="form-control" placeholder="Your Email*">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col form-group">
-                        <textarea name="skills" class="form-control" placeholder="Your Skills"></textarea>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 form-group">
-                        <input name="contact" type="text" class="form-control" placeholder="Contact*">
-                    </div>
-                    <!-- <div class="col-md-6 form-group">
+<div class="container" data-aos="fade-up">
+  <div class="reply-form">
+    <h4 style="text-align: center; margin-bottom: 40px">Share Your Details</h4>
+    <p>Please upload your resume for a speedy process</p>
+    <div class="alert alert-warning alert-dismissible collapse" id="formAlert" role="alert">
+      <!-- <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button> -->
+    </div>
+    <form
+      method="post"
+      enctype="multipart/form-data"
+      action="/resume"
+      role="form"
+      name="myForm"
+      onsubmit="return(validate());"
+    >
+      <div class="row">
+        <div class="col-md-6 form-group">
+          <input
+            name="name"
+            type="text"
+            class="form-control"
+            placeholder="Your Name*"
+          />
+        </div>
+        <div class="col-md-6 form-group">
+          <input
+            name="email"
+            type="text"
+            class="form-control"
+            placeholder="Your Email*"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col form-group">
+          <textarea
+            name="skills"
+            class="form-control"
+            placeholder="Your Skills"
+          ></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 form-group">
+          <input
+            name="contact"
+            type="text"
+            class="form-control"
+            placeholder="Contact*"
+          />
+        </div>
+        <!-- <div class="col-md-6 form-group">
                         <input type="file" name="resume" class="form-control" placeholder="Your Resume">
                     </div> -->
-                    <div class="col-md-6 form-group">
-                        <div class="form-group">
-                            <input type="file" name="resume" placeholder="Your Resume">
-                            <label for="resume" style="float: left; padding-top: 20px;">Upload Resume</label>
-                        </div>
-                    </div>
-                </div>
-                <div style="text-align: center; margin-bottom: 0px;">
-                    <button type="submit" class="btn btn-primary">Apply</button>
-                </div>
-            </form>
+        <div class="col-md-6 form-group">
+          <div class="form-group">
+            <input type="file" name="resume" placeholder="Your Resume" />
+            <label for="resume" style="float: left; padding-top: 20px"
+              >Upload Resume</label
+            >
+          </div>
         </div>
-    </div>
+      </div>
+      <div style="text-align: center; margin-bottom: 0px">
+        <button type="submit" class="btn btn-primary">Apply</button>
+      </div>
+    </form>
+  </div>
+</div>
