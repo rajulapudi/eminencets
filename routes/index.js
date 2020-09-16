@@ -3,6 +3,7 @@ var router = express.Router();
 var formidable = require("formidable");
 var fs = require("fs");
 var path = require("path");
+const { sendEmail } = require("../service/Mail");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -17,7 +18,6 @@ router.post("/resume", function (req, res, next) {
   const form = new formidable.IncomingForm();
   form.parse(req, function (err, fields, files) {
     const { name, email, skills, contact } = fields;
-    console.log(files);
     if (files.resume.name) {
       var oldPath = files.resume.path;
       var newPath =
@@ -27,7 +27,20 @@ router.post("/resume", function (req, res, next) {
         if (err) {
           console.log(err);
         } else {
-          res.render("careers", { info: "Success" });
+          sendEmail({
+            email: email,
+            name: name,
+            skills: skills,
+            contact: contact,
+            file: {
+              name: files.resume.name,
+              path: newPath,
+            },
+          }).then((ret) => {
+            if (ret.status === 200) {
+              res.render("careers", { info: "Success" });
+            }
+          });
         }
       });
     } else {

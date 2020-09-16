@@ -1,1 +1,3 @@
 node_modules/
+service/credentials.json
+service/token.json
