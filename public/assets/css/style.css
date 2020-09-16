@@ -2341,6 +2341,7 @@ section {
 .img-car{
     margin : auto;
     max-width : 700px;
+    border-radius: 10px;
 }
 @media (max-width: 700px) {
   .img-car{
@@ -2348,4 +2349,8 @@ section {
       width : auto;
       margin : auto;
   }
+}
+
+.roundedCorner{
+  border-radius: 10px;
 }
