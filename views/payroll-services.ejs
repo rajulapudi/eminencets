@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <%- include('partials/head') -%>
+    <link href="assets/css/staffing.css" rel="stylesheet" />
   </head>
-
 <body>
   <%- include('partials/navBar') -%>
   <%- include('partials/header') -%>
 
-
   <main id="main">
-    <section id="breadcrumbs" class="breadcrumbs">
+    <section id="staffing" class="d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center"
+          >
+            <h1>Payroll Services</h1>
+            <!-- <h2>
+              Technology Staffing is the core recruiting division of ETS. We
+              work with companies in a wide array of verticals, including
+              retail services, financial services, professional services,
+              insurance services and healthcare industries. We are structured
+              to serve clients on a national level and are able to place
+              professionals in all US regions.
+            </h2> -->
+            <div class="d-flex">
+              <a href="#featuresKey" class="btn-get-started scrollto"
+                >CONSIDER HIRING US</a>
+              
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img">
+            <img
+              src="assets/img/payroll.png"
+              class="img-fluid animated"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
         <ol>
           <li><a href="/">Home</a></li>
@@ -20,19 +49,19 @@
         </ol>
         <h2>Payroll Services</h2>
       </div>
-    </section>
-    <section class="portfolio-details">
+    </section> -->
+    <section class="portfolio-details section-bg">
       <div class="container">
 
-        <div class="portfolio-details-container">
+        <!-- <div class="portfolio-details-container">
 
           <div class="owl-carousel portfolio-details-carousel">
             <img src="assets/img/portfolio/payroll.png" class="img-car" alt="">
           </div>
-        </div>
+        </div> -->
 
-        <div class="portfolio-description">
-          <h2>Payroll Services</h2>
+        <div id="featuresKey" class="portfolio-description">
+
           <p>
             The payroll processing for a business is the backbone of Human resource management. It is an integral part
             of bookkeeping process and it requires highly diligent efforts. When you want your payroll processing to be
@@ -59,7 +88,6 @@
       </div>
     </section>
 
-    <%- include('partials/contact') -%>
   </main>
   <%- include('partials/footer') -%>
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>

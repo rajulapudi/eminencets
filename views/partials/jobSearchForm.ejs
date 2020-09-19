@@ -1,0 +1,123 @@
+<div class="container" data-aos="fade-up">
+  <div class="reply-form">
+    <h4 style="text-align: center; margin-bottom: 40px">Job Search</h4>
+
+    <div
+      class="alert alert-warning alert-dismissible collapse"
+      id="jobFormAlert"
+      role="alert"
+    >
+      <!-- <button
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+    </div>
+    <form
+      method="post"
+      role="form"
+      name="jobSearchForm"
+      onsubmit="return(dummyJob());"
+    >
+      <div class="row">
+        <div class="col form-group">
+          <div class="search">
+            <input
+              type="text"
+              class="searchTerm"
+              name="searchTerm"
+              placeholder="What job role are you looking for?"
+            />
+            <button type="submit" class="searchButton">
+              <i class="bx bx-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-5 form-group">
+          <select name="JobCategory" type="select" class="form-control">
+            <option value="8713">Accounting/Finance</option>
+
+            <option value="8718">Administrative/Clerical</option>
+
+            <option value="25771">Business Development</option>
+
+            <option value="25808">Communications</option>
+
+            <option value="25810">Compliance/Risk</option>
+
+            <option value="25770">Contractor / Consultant</option>
+
+            <option value="8721">Customer Service/Support</option>
+
+            <option value="25772">Executive</option>
+
+            <option value="8725">Human Resources</option>
+
+            <option value="8730" selected="selected">
+              Information Technology
+            </option>
+
+            <option value="8737">Legal</option>
+
+            <option value="8739">Management</option>
+
+            <option value="8741">Marketing/Digital Marketing</option>
+
+            <option value="2140">Other</option>
+
+            <option value="25811">Payroll</option>
+
+            <option value="8743">Public Relations</option>
+
+            <option value="8746">Purchasing/Procurement</option>
+
+            <option value="25812">Real Estate</option>
+
+            <option value="25774">Recruiting</option>
+
+            <option value="25773">Recruiting Support</option>
+
+            <option value="25769">Research / Knowledge Management</option>
+
+            <option value="8748">Sales</option>
+
+            <option value="25809">Tax</option>
+
+            <option value="8750">Travel</option>
+          </select>
+        </div>
+        <div class="col-md-4 form-group">
+          <select name="jobType" type="text" class="form-control">
+            <option value="">(All)</option>
+
+            <option value="2049">Regular Full-Time</option>
+
+            <option value="2050" selected="selected">Regular Part-Time</option>
+
+            <option value="2051">Temporary Full-Time</option>
+
+            <option value="8709">Temporary Part-Time</option>
+
+            <option value="2052">Contract</option>
+
+            <option value="8710">Intern</option>
+          </select>
+        </div>
+        <div class="col-md-3 form-group">
+          <input
+            name="location"
+            type="text"
+            class="form-control"
+            placeholder="Location PIN*"
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

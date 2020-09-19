@@ -603,7 +603,7 @@ section {
   border-radius: 10px;
   background: #fff;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  padding: 40px 30px;
+  padding: 40px 10px;
   width: 100%;
 }
 
@@ -2381,4 +2381,28 @@ section {
 .roundedCorner {
   border-radius: 10px;
 }
+.clientItem {
+  background: #ff5821;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  box-shadow: 0 2px 2px #ffc4b0;
+  border-radius: 10px;
+}
+#clients ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#diffcolor {
+  color: #0a298c;
+}
 
+.uniqueimgs {
+  max-height: 200px;
+  
+}

@@ -13,6 +13,12 @@ router.get("/", function (req, res, next) {
 router.get("/careers", function (req, res, next) {
   res.render("careers", { info: "" });
 });
+router.get("/about", function (req, res, next) {
+  res.render("aboutPage");
+});
+router.get("/clients", function (req, res, next) {
+  res.render("clientsPage");
+});
 
 router.post("/resume", function (req, res, next) {
   const form = new formidable.IncomingForm();

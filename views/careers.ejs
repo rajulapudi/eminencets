@@ -7,14 +7,15 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
+    <link rel="stylesheet" type="text/css" href="assets/css/jobForm.css" />
   </head>
 
   <body>
     <%- include('partials/navBar') -%> <%- include('partials/header') -%>
 
     <main id="main">
-      <%- include('partials/careerInfo') -%> <%- include('partials/uploadForm')
-      -%> <%- include('partials/contact') -%>
+      <%- include('partials/careerInfo') -%> <%-
+      include('partials/jobSearchForm')-%> <%- include('partials/uploadForm')-%>
     </main>
     <%- include('partials/footer') -%>
     <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
@@ -51,6 +52,58 @@
       }
     </script>
     <script type="text/javascript">
+      function dummyJob() {
+        document
+          .getElementById("jobFormAlert")
+          .classList.remove("alert-danger");
+        document.getElementById("jobFormAlert").classList.add("alert-warning");
+        if (document.jobSearchForm.searchTerm.value == "") {
+          document.getElementById("jobFormAlert").innerHTML =
+            "<strong>Please provide proper job search term!</strong> ";
+          $("#jobFormAlert").show();
+          setTimeout(() => {
+            $("#jobFormAlert").hide();
+          }, 2000);
+          document.jobSearchForm.searchTerm.focus();
+          return false;
+        }
+        if (
+          document.jobSearchForm.location.value == "" ||
+          isNaN(document.jobSearchForm.location.value)
+        ) {
+          document.getElementById("jobFormAlert").innerHTML =
+            "<strong>Please provide a correct location pin</strong> ";
+          $("#jobFormAlert").show();
+          setTimeout(() => {
+            $("#jobFormAlert").hide();
+          }, 2000);
+          document.jobSearchForm.location.focus();
+          return false;
+        }
+        if (true) {
+          document.getElementById("jobFormAlert").innerHTML =
+            "<strong>searching....</strong> ";
+          $("#jobFormAlert").show();
+          setTimeout(() => {
+            document.getElementById("jobFormAlert").innerHTML =
+              "<strong>Sorry we cound not find any relevant Jobs !! <br> Please share your details in the form below</strong> ";
+            document
+              .getElementById("jobFormAlert")
+              .classList.remove("alert-warning");
+            document
+              .getElementById("jobFormAlert")
+              .classList.add("alert-danger");
+            setTimeout(() => {
+              $("#jobFormAlert").hide();
+            }, 4000);
+          }, 2000);
+
+          return false;
+        }
+        return true;
+      }
+    </script>
+    <script type="text/javascript">
       function validate() {
         if (document.myForm.name.value == "") {
           document.getElementById("formAlert").innerHTML =
@@ -75,10 +128,10 @@
         if (
           document.myForm.contact.value == "" ||
           isNaN(document.myForm.contact.value) ||
-          document.myForm.contact.value.length >= 10
+          document.myForm.contact.value.length < 12
         ) {
           document.getElementById("formAlert").innerHTML =
-            "<strong>Please provide a contact in the format 91##########!</strong> ";
+            "<strong>Please provide a contact in the format 910000000000!</strong> ";
           $(".alert").show();
           setTimeout(() => {
             $(".alert").hide();
