@@ -17,7 +17,7 @@
       <%- include('partials/careerInfo') -%> <%-
       include('partials/jobSearchForm')-%> <%- include('partials/uploadForm')-%>
     </main>
-    <%- include('partials/footer') -%>
+    <%- include('partials/footer') -%> <%- include('partials/credits') -%>
     <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
     <!-- Vendor JS Files -->
@@ -69,7 +69,8 @@
         }
         if (
           document.jobSearchForm.location.value == "" ||
-          isNaN(document.jobSearchForm.location.value)
+          isNaN(document.jobSearchForm.location.value) ||
+          document.jobSearchForm.location.value.length !== 5
         ) {
           document.getElementById("jobFormAlert").innerHTML =
             "<strong>Please provide a correct location pin</strong> ";

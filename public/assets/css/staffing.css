@@ -1,6 +1,5 @@
 #staffing {
   width: 100%;
-  height: 60vh;
   background: #fff;
   padding-top: 82px;
 }
@@ -66,9 +65,9 @@
 }
 
 @media (max-width: 991px) {
-  #staffing {
+  /* #staffing {
     height: 60vh;
-  }
+  } */
   #staffing .animated {
     -webkit-animation: none;
     animation: none;

@@ -16,6 +16,9 @@ router.get("/careers", function (req, res, next) {
 router.get("/about", function (req, res, next) {
   res.render("aboutPage");
 });
+router.get("/contact", function (req, res, next) {
+  res.render("contactUs");
+});
 router.get("/clients", function (req, res, next) {
   res.render("clientsPage");
 });

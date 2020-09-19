@@ -22,7 +22,7 @@ const sendEmail = async (data) => {
 
     await transporter.sendMail({
       from: SENDER_EMAIL_ADDRESS,
-      to: data.email,
+      to: "info@eminencets.com",
       subject: "application recieved",
       text: `${data.name} with ${data.contact} having the skills ${data.skills}`,
       attachments: [
@@ -31,6 +31,12 @@ const sendEmail = async (data) => {
           path: data.file.path,
         },
       ],
+    });
+    await transporter.sendMail({
+      from: SENDER_EMAIL_ADDRESS,
+      to: data.email,
+      subject: "Thank you for applying with ETS",
+      text: `Dear ${data.name} thank you for applying through ETS. We will contact you shortly with opportunities.`,
     });
     return {
       status: 200,

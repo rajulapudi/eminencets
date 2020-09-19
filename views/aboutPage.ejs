@@ -2,13 +2,16 @@
 <html>
   <head>
     <%- include('partials/head') -%>
-    <link href="assets/css/staffing.css" rel="stylesheet" />
   </head>
   <body>
     <%- include('partials/navBar') -%> <%- include('partials/header') -%>
 
-    <main id="main"><%- include('partials/aboutus') -%></main>
-    <%- include('partials/footer') -%>
+    <main id="main">
+      <%- include('partials/aboutus') -%> <%- include('partials/team') -%> <%-
+      include('partials/values') -%>
+      
+    </main>
+    <%- include('partials/footer') -%> <%- include('partials/credits') -%>
     <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
     <!-- Vendor JS Files -->

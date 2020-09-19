@@ -11,6 +11,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #313030;
+  background: #f2f2f2;
 }
 
 a {
@@ -28,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -911,7 +912,7 @@ section {
   padding: 160px 20px 20px 20px;
   position: relative;
   width: 100%;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -2210,12 +2211,10 @@ section {
 #footer {
   color: #313030;
   font-size: 14px;
-  background: #fff;
 }
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
-  background: #fff9f7;
 }
 
 #footer .footer-top .footer-contact {
@@ -2333,10 +2332,11 @@ section {
   background: #ed3b00;
 }
 
-#footer .credits {
+.credits {
   padding-top: 5px;
   font-size: 13px;
-  color: #313030;
+  color: #fff;
+  background: #39312f;
 }
 
 #footer .social-links a {
@@ -2399,13 +2399,23 @@ section {
   list-style: none;
 }
 #diffcolor {
-  color: #0a298c;
+  font-weight: 100;
+  text-decoration: underline;
+  text-decoration-color: #313030;
+  text-decoration-style: dotted;
 }
 
 .uniqueimgs {
-  max-height: 200px;
+  height: 200px;
 }
 
 .resultImg {
-  max-width: 600px;
+  margin-top: 20px;
+  max-width: 90vw;
+}
+.color {
+  color: #ff5821;
+}
+.bigger {
+  font-size: 32px;
 }
