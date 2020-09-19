@@ -2404,5 +2404,8 @@ section {
 
 .uniqueimgs {
   max-height: 200px;
-  
+}
+
+.resultImg {
+  max-width: 600px;
 }
