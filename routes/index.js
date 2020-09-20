@@ -3,7 +3,7 @@ var router = express.Router();
 var formidable = require("formidable");
 var fs = require("fs");
 var path = require("path");
-const { sendEmail } = require("../service/Mail");
+const { sendEmail, contactEmail } = require("../service/Mail");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -23,6 +23,30 @@ router.get("/clients", function (req, res, next) {
   res.render("clientsPage");
 });
 
+router.post("/contactus", function (req, res, next) {
+  console.log("route called");
+  let name = req.body.name;
+  let email = req.body.email;
+  let message = req.body.message;
+  let phone = req.body.phone;
+  let subject = req.body.subject;
+  contactEmail({
+    email: email,
+    name: name,
+    phone: phone,
+    subject: subject,
+    message: message,
+  })
+    .then((ret) => {
+      if (ret.status === 200) {
+        console.log("sending response");
+        res.status(200).send("OK");
+      }
+    })
+    .catch((e) => {
+      res.status(500).send("Not OK");
+    });
+});
 router.post("/resume", function (req, res, next) {
   const form = new formidable.IncomingForm();
   form.parse(req, function (err, fields, files) {

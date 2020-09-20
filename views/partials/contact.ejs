@@ -6,8 +6,8 @@
       >
         <h1>Contact Us</h1>
         <p>If you would like to speak with an ETS associate about a current IT need for your
-          organization, please call us at 1-732 348 0123
-          or email us at info@eminencets.com</p>
+          organization, please call us at <strong style="font-size: large;">+1-732 348 0123</strong> 
+          or email us at <strong style="font-size: large;">info@eminencets.com</strong> </p>
         <!-- <h2>
         Technology Staffing is the core recruiting division of ETS. We
         work with companies in a wide array of verticals, including
@@ -38,18 +38,13 @@
 <section id="contact" class="contact section-bg">
   <div class="container">
 
-    <div class="section-title">
-      <!-- <h2 data-aos="fade-up">Contact</h2> -->
-
-    </div>
-
     <div class="row justify-content-center">
 
       <div class="col-xl-6 col-lg-6 mt-4" data-aos="fade-up">
         <div class="info-box">
           <i class="bx bx-map"></i>
           <h3>Corporate Office</h3>
-          <p>370 Campus Drive Suite 138, <br> Somerset, NJ 08873
+          <p>370 Campus Drive Suite #138, <br> Somerset, NJ 08873
             <br> Phone : +1 732-348-0123 <br>
             Fax : +1 732-626-7007 <br>
             <span>info@eminencets.com</span></p>
@@ -65,6 +60,7 @@
             <span>info@eminencets.com</span></p>
         </div>
       </div>
+    </div>
       <!-- 
       <div class="col-xl-6 col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="100">
         <div class="info-box">
@@ -74,19 +70,28 @@
         </div>
       </div>
     </div> -->
-      <!-- 
+      
     <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
       <div class="col-xl-9 col-lg-12 mt-4">
-        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+        <form method="post"
+        action="/contactus"
+        role="form"
+        name="contactForm"
+        class="php-email-form">
           <div class="form-row">
-            <div class="col-md-6 form-group">
+            <div class="col-md-4 form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4"
                 data-msg="Please enter at least 4 chars" />
               <div class="validate"></div>
             </div>
-            <div class="col-md-6 form-group">
+            <div class="col-md-4 form-group">
               <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
                 data-rule="email" data-msg="Please enter a valid email" />
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group">
+              <input type="number" class="form-control" name="phone" id="phone" placeholder="Your Contact"
+                data-rule="minlen:10" data-msg="Please enter a valid phone" />
               <div class="validate"></div>
             </div>
           </div>
@@ -109,7 +114,7 @@
         </form>
       </div>
 
-    </div> -->
-
     </div>
+
+   
 </section>
