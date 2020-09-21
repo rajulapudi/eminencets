@@ -2424,3 +2424,8 @@ section {
   font-size: 16px;
   font-weight: 700;
 }
+@media (min-width: 1040px) {
+  .whyuscards {
+    margin-top: -150px;
+  }
+}
